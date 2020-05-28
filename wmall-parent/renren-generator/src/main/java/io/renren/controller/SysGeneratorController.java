@@ -29,7 +29,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @Controller
-@RequestMapping("/sys/generator")
+@PostMapping("/sys/generator")
 public class SysGeneratorController {
 	@Autowired
 	private SysGeneratorService sysGeneratorService;
@@ -38,7 +38,7 @@ public class SysGeneratorController {
 	 * 列表
 	 */
 	@ResponseBody
-	@RequestMapping("/list")
+	@PostMapping("/list")
 	public R list(@RequestParam Map<String, Object> params){
 		PageUtils pageUtil = sysGeneratorService.queryList(new Query(params));
 		
@@ -48,7 +48,7 @@ public class SysGeneratorController {
 	/**
 	 * 生成代码
 	 */
-	@RequestMapping("/code")
+	@PostMapping("/code")
 	public void code(String tables, HttpServletResponse response) throws IOException{
 		byte[] data = sysGeneratorService.generatorCode(tables.split(","));
 		

@@ -35,7 +35,7 @@ public class ScheduleJobLogController {
 	/**
 	 * 定时任务日志列表
 	 */
-	@RequestMapping("/list")
+	@PostMapping("/list")
 	@RequiresPermissions("sys:schedule:log")
 	public R list(@RequestParam Map<String, Object> params){
 		PageUtils page = scheduleJobLogService.queryPage(params);
@@ -46,7 +46,7 @@ public class ScheduleJobLogController {
 	/**
 	 * 定时任务日志信息
 	 */
-	@RequestMapping("/info/{logId}")
+	@PostMapping("/info/{logId}")
 	public R info(@PathVariable("logId") Long logId){
 		ScheduleJobLogEntity log = scheduleJobLogService.getById(logId);
 		
