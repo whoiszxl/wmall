@@ -13,4 +13,11 @@
     <artifactId>wmall-ware</artifactId>
 
 
+    <packaging>pom</packaging>
+    <modules>
+        <module>wmall-ware-api</module>
+        <module>wmall-ware-web</module>
+    </modules>
+
+
 </project>

@@ -15,6 +15,7 @@ import io.renren.utils.R;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,7 +30,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @Controller
-@PostMapping("/sys/generator")
+@RequestMapping("/sys/generator")
 public class SysGeneratorController {
 	@Autowired
 	private SysGeneratorService sysGeneratorService;
@@ -38,7 +39,7 @@ public class SysGeneratorController {
 	 * 列表
 	 */
 	@ResponseBody
-	@PostMapping("/list")
+	@RequestMapping("/list")
 	public R list(@RequestParam Map<String, Object> params){
 		PageUtils pageUtil = sysGeneratorService.queryList(new Query(params));
 		
@@ -48,7 +49,7 @@ public class SysGeneratorController {
 	/**
 	 * 生成代码
 	 */
-	@PostMapping("/code")
+	@RequestMapping("/code")
 	public void code(String tables, HttpServletResponse response) throws IOException{
 		byte[] data = sysGeneratorService.generatorCode(tables.split(","));
 		

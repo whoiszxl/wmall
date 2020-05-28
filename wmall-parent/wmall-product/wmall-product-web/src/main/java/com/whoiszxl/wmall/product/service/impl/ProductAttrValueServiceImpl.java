@@ -1,6 +1,5 @@
 package com.whoiszxl.wmall.product.service.impl;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -25,12 +24,6 @@ public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao
         );
 
         return new PageUtils(page);
-    }
-
-
-    public static void main(String[] args) {
-        String encode = new BCryptPasswordEncoder().encode("wmall1020");
-        System.out.println(encode);
     }
 
 }

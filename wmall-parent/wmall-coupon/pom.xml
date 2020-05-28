@@ -11,6 +11,11 @@
 
     <groupId>com.whoiszxl.wmall.coupon</groupId>
     <artifactId>wmall-coupon</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>wmall-coupon-api</module>
+        <module>wmall-coupon-web</module>
+    </modules>
 
 
 </project>

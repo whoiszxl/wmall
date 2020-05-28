@@ -1,0 +1,39 @@
+server:
+  port: 10003 #启动端口 命令行注入
+  max-http-header-size: 100KB
+
+nacos:
+  server:
+    addr: 193.112.137.231:8848
+
+spring:
+  application:
+    name: wmall-order-web
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-wz9p7ne0m7sqb751fao.mysql.rds.aliyuncs.com:3306/wmall_oms
+    username: wmall
+    password: wmall1020
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.server.addr}
+        namespace: 3e362dcd-442c-4875-a04e-3b9d236f9c0d
+        cluster-name: DEFAULT
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+logging:
+  config: classpath:log4j2.xml

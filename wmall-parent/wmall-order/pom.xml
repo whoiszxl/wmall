@@ -11,6 +11,11 @@
 
     <groupId>com.whoiszxl.wmall.order</groupId>
     <artifactId>wmall-order</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>wmall-order-api</module>
+        <module>wmall-order-web</module>
+    </modules>
 
 
 </project>

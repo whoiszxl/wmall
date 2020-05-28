@@ -19,7 +19,7 @@ import com.whoiszxl.common.utils.R;
  *
  * @author whoiszxl
  * @email whoiszxl@gmail.com
- * @date 2020-05-28 07:12:33
+ * @date 2020-05-27 23:10:00
  */
 @RestController
 @RequestMapping("product/brand")
@@ -32,7 +32,7 @@ public class BrandController {
      */
     @PostMapping("/list")
     //@RequiresPermissions("product:brand:list")
-    public R list(@RequestBody Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params){
         PageUtils page = brandService.queryPage(params);
 
         return R.ok().put("page", page);

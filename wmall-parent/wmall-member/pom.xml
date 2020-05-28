@@ -11,6 +11,11 @@
 
     <groupId>com.whoiszxl.wmall.member</groupId>
     <artifactId>wmall-member</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>wmall-member-api</module>
+        <module>wmall-member-web</module>
+    </modules>
 
 
 </project>

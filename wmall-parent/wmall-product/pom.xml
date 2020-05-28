@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.whoiszxl.wmall.product</groupId>
+    <groupId>com.whoiszxl.wmall</groupId>
     <artifactId>wmall-product</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>wmall-product-api</module>
         <module>wmall-product-web</module>

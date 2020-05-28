@@ -12,5 +12,12 @@
     <groupId>com.whoiszxl.wmall.oss</groupId>
     <artifactId>wmall-oss</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.whoiszxl.common</groupId>
+            <artifactId>wmall-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

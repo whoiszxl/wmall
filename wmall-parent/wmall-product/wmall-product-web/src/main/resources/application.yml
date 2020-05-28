@@ -1,5 +1,5 @@
 server:
-  port: 10010 #启动端口 命令行注入
+  port: 10004 #启动端口 命令行注入
   max-http-header-size: 100KB
 
 nacos:
