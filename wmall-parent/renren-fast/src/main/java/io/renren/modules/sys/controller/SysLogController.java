@@ -28,7 +28,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @Controller
-@PostMapping("/sys/log")
+@RequestMapping("/sys/log")
 public class SysLogController {
 	@Autowired
 	private SysLogService sysLogService;

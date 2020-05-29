@@ -37,6 +37,14 @@ spring:
         min-idle: 5       # 连接池中的最小空闲连接
   mvc:
     throw-exception-if-no-handler-found: true
+  application:
+    name: renren-fast
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 193.112.137.231:8848
+        namespace: 3e362dcd-442c-4875-a04e-3b9d236f9c0d
+        cluster-name: DEFAULT
 #  resources:
 #    add-mappings: false
 
